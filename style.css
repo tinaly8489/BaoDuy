@@ -1,442 +1,252 @@
+```css
+/* =========================
+   GENERAL STYLES
+========================= */
 
-/* ==============================
-   1. GENERAL SETTINGS
-   Set the default style for the whole website
-============================== */
-
-/* Apply these settings to all elements */
 * {
-  box-sizing: border-box; /* Include padding and border in element dimensions */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Enable smooth scrolling when clicking navigation links */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 }
 
-/* Style the entire webpage */
 body {
-  margin: 0; /* Remove the browser's default outer margin */
-  padding: 20px;
-
-  /* Create a blue gradient background from left to right */
-  background: linear-gradient(
-    to right,
-    #E3F2FD,
-    #90CAF9,
-    #2196F3,
-    #0D47A1,
-    #3E3E75
-  );
-
-  font-family: cursive; /* Use a playful font style */
-  color: #111;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
 }
 
-
-/* ==============================
-   2. HEADER AND LOGO
-============================== */
-
-/* Style the logo image inside the header */
-header img {
-  width: 80px;
-  height: auto;
-  object-fit: contain; /* Keep the entire logo visible */
-}
-
-/* Arrange the logo and shop name horizontally */
-.roberts-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap; /* Allow items to wrap on small screens */
-  margin-bottom: 20px;
-}
-
-/* Style the shop name */
-.roberts-title h1 {
-  margin: 0;
-}
-
-
-/* ==============================
-   3. NAVIGATION MENU
-============================== */
-
-/* Style the navigation container */
-nav {
-  position: sticky; /* Keep the navigation visible while scrolling */
-  top: 0;
-  z-index: 1000; /* Keep the menu above other elements */
-  padding: 5px 0;
-}
-
-/* Arrange navigation links horizontally */
-.menu {
-  background-color: black;
-  padding: 10px;
-  border-radius: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Move links to the next line if necessary */
-  gap: 15px;
-}
-
-/* Style all navigation links */
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 12px;
-
-  transition: 0.3s ease; /* Smooth hover effect */
-}
-
-/* Change the link background when the mouse hovers over it */
-.menu a:hover {
-  background-color: yellow;
-  color: black;
-}
-
-
-/* ==============================
-   4. GENERAL HEADINGS
-============================== */
-
-/* Center all h1 headings */
-h1 {
-  text-align: center;
-}
-
-/* Add an emoji after every h1 heading */
-h1::after {
-  content: " 😍";
-}
-
-
-/* ==============================
-   5. BUTTONS
-============================== */
-
-/* Set the default style for buttons */
-button {
-  background-color: #00FFEF;
-  padding: 15px;
-  font-family: inherit;
-  font-size: 18px;
-
-  border-radius: 25px;
-  border: 3px solid black;
-
-  cursor: pointer; /* Show a hand cursor */
-  transition: 0.3s ease;
-}
-
-/* Change the button appearance on hover */
-button:hover {
-  background-color: yellow;
-  transform: scale(1.05);
-}
-
-
-/* ==============================
-   6. BEST SELLER PRODUCT LAYOUT
-============================== */
-
-/* Arrange all best seller cards in a flexible row */
-.all-products {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap; /* Move cards to the next row */
-  gap: 30px;
-
-  margin: 30px auto;
-}
-
-/* Style each best seller product card */
-.products {
-  width: 280px;
-  min-height: 380px;
-  padding: 25px;
-
-  background-color: white;
-  border-radius: 35px;
-  border: 5px solid black;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-
-  text-align: center;
-
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-/* Style product images */
-.products img {
-  width: 70%;
-  height: 150px;
-  object-fit: contain; /* Fit the entire product inside the image area */
-}
-
-/* Style product names */
-.products h3 {
-  font-size: 18px;
-  margin: 12px 0;
-}
-
-/* Style product prices */
-.products strong {
-  color: red;
-  font-size: 16px;
-}
-
-/* Add a lift and red glow when hovering over a product card */
-.products:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 30px red;
-}
-
-
-/* ==============================
-   7. ABOUT US SECTION
-============================== */
-
-/* Arrange the About Us content vertically */
-.about-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 15px;
-}
-
-/* Style the About Us image */
-.about-us img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  object-fit: contain;
-
-  border-radius: 15px;
-
-  /* Set the transition before hover so it works in both directions */
-  transition: transform 2s, box-shadow 0.5s;
-}
-
-/* Rotate the image and add a red glow on hover */
-.about-us img:hover {
-  box-shadow: 0 0 40px red;
-  transform: rotate(360deg);
-}
-
-
-/* ==============================
-   8. STORE MAP SECTION
-============================== */
-
-/* Arrange the map content vertically */
-.map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 15px;
-}
-
-/* Style the store map image */
-.map img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  object-fit: contain;
-
-  border-radius: 15px;
-
-  /* Animate the image smoothly */
-  transition: transform 2s, box-shadow 0.5s;
-}
-
-/* Rotate the map image on hover */
-.map img:hover {
-  box-shadow: 0 0 40px red;
-  transform: rotate(360deg);
-}
-
-
-/* ==============================
-   9. ABOUT US AND MAP LAYOUT
-============================== */
-
-/* Stack About Us and Map vertically */
-.our-shop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-
-  margin: 40px auto;
-}
-
-
-/* ==============================
-   10. IPAD COLLECTION
-============================== */
-
-/* Center the iPad collection section */
-.ipad-menu {
-  text-align: center;
-  margin: 50px auto;
-}
-
-/* Arrange iPad cards in a flexible row */
-.ipad-products {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 35px;
-
-  margin: 30px auto;
-}
-
-/* Style each collection card */
-.ipad-card {
-  width: 280px;
-  min-height: 380px;
-  padding: 25px;
-
-  background-color: white;
-  border: 5px solid black;
-  border-radius: 30px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  text-align: center;
-
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-/* Keep product images the same size */
-.ipad-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-
-/* Style product names */
-.ipad-card h3 {
-  font-size: 20px;
-  margin: 15px 0;
-}
-
-/* Style product prices */
-.ipad-card strong {
-  color: red;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* Style buttons inside collection cards */
-.ipad-card button {
-  background-color: #00FFEF;
-  padding: 12px 18px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: 3px solid black;
-  cursor: pointer;
-}
-
-/* Lift the collection card and add a red glow on hover */
-.ipad-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px red;
-}
-
-
-/* ==============================
-   11. NAVIGATION TARGET SPACING
-   Prevent headings from hiding under the sticky menu
-============================== */
-
-#home,
-#best-sellers,
-#ipad,
-#laptop,
-#android,
-#tv,
-#about-us,
-#store-map,
-#hotline {
-  scroll-margin-top: 90px;
-}
-
-
-/* ==============================
-   12. RESPONSIVE DESIGN
-   Adjust the layout for mobile screens
-============================== */
-
-@media (max-width: 600px) {
-
-  /* Reduce the outer spacing on small screens */
-  body {
-    padding: 10px;
-  }
-
-  /* Reduce the gap between the logo and shop name */
-  .roberts-title {
-    gap: 10px;
-  }
-
-  /* Make the shop name smaller */
-  .roberts-title h1 {
-    font-size: 24px;
-  }
-
-  /* Reduce menu spacing */
-  .menu {
-    gap: 5px;
-    padding: 8px;
-  }
-
-  /* Make navigation links more compact */
-  .menu a {
-    font-size: 13px;
-    padding: 7px 8px;
-  }
-
-  /* Let product cards fit smaller screens */
-  .products,
-  .ipad-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  /* Keep images from becoming too large */
-  .about-us img,
-  .map img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Make product card images consistent */
-  .products img,
-  .ipad-card img {
+img {
     max-width: 100%;
-    object-fit: contain;
-  }
+    height: auto;
+    display: block;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 18px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f0b429;
+}
+
+/* =========================
+   COLLECTION SECTIONS
+========================= */
+
+.laptop-collection,
+.android-collection,
+.tv-collection {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    scroll-margin-top: 20px;
+}
+
+/* Collection headings */
+
+.laptop-collection h1,
+.android-collection h1,
+.tv-collection h1,
+.laptop-collection h2,
+.android-collection h2,
+.tv-collection h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+/* Collection descriptions */
+
+.laptop-collection p,
+.android-collection p,
+.tv-collection p {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* =========================
+   PRODUCT CONTAINERS
+========================= */
+
+.ipad-products,
+.product-container,
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+
+.product-card {
+    width: 250px;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.product-card p {
+    width: 100%;
+    margin: 0 auto 12px;
+    padding: 0;
+    text-align: center;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #c0392b;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #444;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+footer p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+    nav {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .laptop-collection,
+    .android-collection,
+    .tv-collection {
+        padding: 35px 15px;
+    }
+
+    .laptop-collection p,
+    .android-collection p,
+    .tv-collection p {
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .ipad-products,
+    .product-container,
+    .products {
+        gap: 15px;
+    }
+
+    .product-card {
+        width: calc(50% - 15px);
+        min-width: 140px;
+        padding: 12px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
+```
