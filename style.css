@@ -1,373 +1,198 @@
-```css
-/* =========================
-   1. GENERAL SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header img{
+object-fit: cover;    
+width: 80px ; height: auto;    
 }
-
-html {
-    scroll-behavior: smooth;
+body{
+background: linear-gradient(to right,#E3F2FD,#90CAF9,#2196F3,#0D47A1,#3E3E75);    
+font-family:cursive
 }
-
-body {
-    font-family: Arial, sans-serif;
+.roberts-title { 
+display:flex ;
+justify-content: center;
+gap:30px    
 }
-
-
-/* =========================
-   2. HEADER
-========================= */
-
-header {
-    width: 100%;
-}
-
-.roberts-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-}
-
-.roberts-title img {
-    width: 80px;
-    height: auto;
-    object-fit: contain;
-}
-
-.roberts-title h1 {
-    text-align: center;
-}
-
-
-/* =========================
-   3. NAVIGATION
-========================= */
-
-nav {
-    width: 100%;
-}
-
 .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 15px 20px;
+background-color:black;
+padding:10px;
+border-radius:20px;     
+display:flex ;
+justify-content: center;
+align-items: center;
+gap:15px
 }
-
-.menu a {
-    text-decoration: none;
+a {
+color:red;text-decoration:none;
 }
-
-
-/* =========================
-   4. MAIN CONTENT
-========================= */
-
-main {
-    width: 100%;
-    margin: 0 auto;
+a:hover {
+background-color:yellow;
 }
-
-main > h1,
-#best-sellers > h1 {
-    text-align: center;
-    margin: 30px 0;
-}
-
-
-/* =========================
-   5. BEST SELLER PRODUCTS
-========================= */
-
-.all-products {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-}
-
-.products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 250px;
-    padding: 15px;
-}
-
 .products img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 15px;
+width:200px;
+height:auto;
+object-fit: cover;    
 }
-
-.products h3 {
-    text-align: center;
-    margin-bottom: 10px;
+.all-products {
+display:flex;justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
 }
-
-.products strong {
-    text-align: center;
-    margin-bottom: 15px;
+.products {
+width:200px;height:200px;    
+background-color:white;border-radius:50px;
+border:7px solid black;
+padding:40px;
+display:flex;justify-content:center;align-items:center;
+flex-direction: column;
 }
-
-
-/* =========================
-   6. ABOUT US AND STORE MAP
-========================= */
-
-.our-shop {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
-    padding: 30px 20px;
+.products img {
+width:50%; height:auto; object-fit: contain; 
 }
-
-.about-us,
+h1 {
+text-align:center;    
+}
+h1::after {
+content:"😍";
+}
+button {
+background-color:#00FFEF;padding:15px;font-size:20px;
+border-radius:25px;border:3px solid black;  
+}
+.products:hover {
+transform:translateY(-30px)
+scale(1.05);
+box-shadow:0 0 30px red;           
+}
+.about-us img{
+width:600px;height:auto;object-fit:contain;
+}
+.about-us img:hover {
+box-shadow:0 0 75px red;
+transform:rotate(360deg);
+transition: 8s;    
+}
+.about-us {
+display:flex;justify-content:center;
+align-items:center;
+flex-direction: column;      
+}
+.map img{
+width:600px;height:auto;object-fit:contain;
+}
+.map img:hover {
+box-shadow:0 0 75px red;
+transform:rotate(360deg);
+transition: 8s;    
+}
 .map {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
+display:flex;justify-content:center;
+align-items:center;
+flex-direction: column;      
 }
-
-.about-us h1,
-.map h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-us img,
-.map img {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin: 0 auto;
+.our-shop {
+display:flex;justify-content:center;
+align-items:center;
+flex-direction: column;
+gap:20px;    
 }
 
 
-/* =========================
-   7. COLLECTION SECTIONS
-========================= */
+
+/* IPAD COLLECTION */
+
+.ipad-menu {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.ipad-products {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin: 30px auto;
+}
+
+.ipad-card {
+  width: 280px;
+  min-height: 380px;
+  padding: 25px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.4s;
+}
+
+.ipad-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.ipad-card h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.ipad-card strong {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.ipad-card button {
+  background-color: #00FFEF;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+.ipad-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px red;
+}
+
+/* CENTER ALL COLLECTIONS */
 
 .ipad-menu,
 .laptop-collection,
 .android-collection,
 .tv-collection {
-    width: 100%;
-    padding: 30px 20px;
-    text-align: center;
-    scroll-margin-top: 30px;
+  text-align: center;
+  margin: 50px auto;
 }
-
-
-/* Collection headings */
 
 .ipad-menu h1,
+.ipad-menu p,
 .laptop-collection h1,
+.laptop-collection p,
 .android-collection h1,
-.tv-collection h1 {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto 20px;
+.android-collection p,
+.tv-collection h1,
+.tv-collection p {
+  text-align: center;
 }
 
-
-/* Collection descriptions: CENTER ALIGNMENT */
-
-.ipad-menu > p,
-.laptop-collection > p,
-.android-collection > p,
-.tv-collection > p {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto 30px;
-    padding: 0 10px;
-    line-height: 1.6;
-}
-
-
-/* =========================
-   8. COLLECTION PRODUCT LAYOUT
-========================= */
-
+/* CENTER ALL PRODUCT CARDS */
 .ipad-products {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 25px;
-    width: 100%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin: 30px auto;
 }
-
-
-/* =========================
-   9. COLLECTION PRODUCT CARDS
-========================= */
-
-.ipad-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 280px;
-    max-width: 100%;
-    padding: 15px;
-}
-
-.ipad-card img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    margin: 0 auto 15px;
-}
-
-.ipad-card h3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.ipad-card strong {
-    display: block;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   10. BUTTONS
-========================= */
-
-button {
-    cursor: pointer;
-}
-
-
-/* =========================
-   11. FOOTER
-========================= */
 
 footer {
-    width: 100%;
-    text-align: center;
-    padding: 25px 20px;
+  text-align: center;
 }
-
-footer h2,
-footer p {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-footer a {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-
-/* =========================
-   12. NAVIGATION TARGETS
-========================= */
-
-#ipad-menu,
-#laptop-collection,
-#android-collection,
-#tv-collection,
-#about-us,
-#hotline {
-    scroll-margin-top: 30px;
-}
-
-
-/* =========================
-   13. RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 768px) {
-
-    .roberts-title {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu {
-        gap: 15px;
-    }
-
-    .our-shop {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-us,
-    .map {
-        width: 100%;
-    }
-
-    .ipad-products {
-        gap: 20px;
-    }
-
-    .ipad-card {
-        width: calc(50% - 10px);
-        min-width: 200px;
-    }
-
-    .ipad-card img {
-        height: 180px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .menu {
-        gap: 12px;
-        padding: 12px;
-    }
-
-    .ipad-menu,
-    .laptop-collection,
-    .android-collection,
-    .tv-collection {
-        padding: 25px 12px;
-    }
-
-    .ipad-card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .ipad-card img {
-        height: 200px;
-    }
-
-    .ipad-menu > p,
-    .laptop-collection > p,
-    .android-collection > p,
-    .tv-collection > p {
-        text-align: center;
-        padding: 0 10px;
-    }
-}
-```
